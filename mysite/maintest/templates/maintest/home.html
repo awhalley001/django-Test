@@ -1,0 +1,11 @@
+{% extends 'maintest/base.html' %}
+{% block title %}Home Page{%  endblock %}
+
+{% block content %}
+    <h1>Home Page</h1>
+    <form method="POST" enctype="multipart/form-data">
+    {%  csrf_token %}
+    {{ form.as_p }}
+    <button type="submit", name="hump">Hump Operation</button>
+    </form>
+{% endblock %}

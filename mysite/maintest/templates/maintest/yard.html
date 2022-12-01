@@ -1,0 +1,23 @@
+{%  extends "maintest/base.html" %}
+{% block title %}Yard Page{% endblock %}
+
+{% block content %}
+
+    <h1>Yard Table</h1>
+    <table>
+    <tr>
+        <th>id</th>
+        <th>SBDV_NAME</th>
+        <th>TRK_SYS_NBR</th>
+        <th>dist</th>
+        <th>car_capacity</th>
+    </tr>
+    {% for item in ls %}
+        <tr>
+        {% for x in item %}
+        <td>{{ x }}</td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
